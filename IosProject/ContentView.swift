@@ -56,7 +56,7 @@ struct ContentView: View {
 
                 }
                
-                Text("Photo taken by DSLR Camera ")
+                Text("Photo taken by DSLR Camera Pro")
                     .foregroundColor(Color.yellow)
                 }
             .padding()
