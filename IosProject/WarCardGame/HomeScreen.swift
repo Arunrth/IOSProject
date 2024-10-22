@@ -8,7 +8,15 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
+    var playerCard = "card2"
+    var computerCard = "card3"
+    
+    var playerScore = 0
+    var computerScore = 0
+    
     var body: some View {
+        
         ZStack{
            
             Image("background-plain")
@@ -22,13 +30,24 @@ struct HomeScreen: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    Image("card2")
+                    Image(playerCard)
                     Spacer()
-                    Image("card3")
+                    Image(computerCard)
                     Spacer()
                 }
                 Spacer()
-                Image("button")
+                
+//                Button("Deal"){
+//                    dealCardAction()
+//                }
+//                .foregroundColor(.white)
+                
+                Button{
+                    dealCardAction()
+                } label:{
+                    Image("button")
+                }
+                
                 Spacer()
                 HStack{
                     Spacer()
@@ -36,15 +55,15 @@ struct HomeScreen: View {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom,10)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                     }
                     Spacer()
                     VStack{
-                        Text("CPU")
+                        Text("Computer")
                             .font(.headline)
                             .padding(.bottom, 10)
-                        Text("0")
+                        Text(String(computerScore))
                             .font(.largeTitle)
                     }
                     Spacer()
@@ -53,6 +72,10 @@ struct HomeScreen: View {
                 Spacer()
             }
         }
+    }
+    
+    func dealCardAction(){
+        print("deal card actions called")
     }
 }
 
