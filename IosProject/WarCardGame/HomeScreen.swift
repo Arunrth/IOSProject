@@ -9,11 +9,11 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    var playerCard = "card2"
-    var computerCard = "card3"
+    @State var playerCard = "card2"
+    @State var computerCard = "card3"
     
-    var playerScore = 0
-    var computerScore = 0
+    @State var playerScore = 0
+    @State var computerScore = 0
     
     var body: some View {
         
@@ -75,7 +75,19 @@ struct HomeScreen: View {
     }
     
     func dealCardAction(){
-        print("deal card actions called")
+        //   player card
+        var playerCardValue = Int.random(in: 2...14)
+        playerCard = "card" + String(playerCardValue)
+        
+        //   computer card
+        var computerCardValue = Int.random(in: 2...14)
+        computerCard = "card" + String(computerCardValue)
+        
+        if playerCardValue > computerCardValue{
+            playerScore += 1
+        } else if computerCardValue > playerCardValue{
+            computerScore += 1
+        }
     }
 }
 
