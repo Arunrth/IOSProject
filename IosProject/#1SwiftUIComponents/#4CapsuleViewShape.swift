@@ -5,11 +5,17 @@
 //  Created by Arun Rathore on 26/10/24.
 //
 
+// Capsule same properties as circle
+
 import SwiftUI
 
 struct _4CapsuleViewShape: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Capsule(style: .continuous)
+            .fill(.green)
+            .frame(width:200,height: 50)
+            
+            
     }
 }
 
