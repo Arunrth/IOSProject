@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct _2Shape: View {
+struct _2CircleShape: View {
     var body: some View {
-        Circle()
+//        Circle()
 //            .fill(.yellow)
 //            .foregroundColor(.green)
 //            .stroke()
@@ -20,9 +20,19 @@ struct _2Shape: View {
 //            .fill(.yellow)
 //            .trim(from: 0.2, to: 1)
 //            .stroke(.green, style: StrokeStyle(lineWidth: 20))
+        
+        
+        
+        Circle()
+//            .fill(.yellow)
+//            .foregroundColor(.gray)
+//            .stroke()
+            .trim(from: 0.4, to: 1)
+            .stroke(.green, style: StrokeStyle(lineWidth: 20, lineCap: .square, dash: [2,40]))
+            
     }
 }
 
 #Preview {
-    _2Shape()
+    _2CircleShape()
 }
