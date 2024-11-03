@@ -18,3 +18,4 @@ struct _6RoundedRectangleView: View {
 #Preview {
     _6RoundedRectangleView()
 }
+
