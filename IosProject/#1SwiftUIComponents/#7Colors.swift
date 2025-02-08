@@ -13,6 +13,8 @@ import SwiftUI
 //  how to get #colorLiteral then press left parenthesis (
 // UIColor comes from uikit
         let red = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
+        
+        let col = #colorLiteral(red: 0.06666666667, green: 0.09411764706, blue: 0.1529411765, alpha: 1)
 
         var body: some View{
             RoundedRectangle(cornerRadius: 25)
