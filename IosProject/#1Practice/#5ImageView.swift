@@ -21,14 +21,24 @@ struct _5ImageView : View {
 //            .scaledToFill()
 //            .frame(width: 300, height: 200)
         
+        Image("arunPic")
+            .resizable()
+//            .clipShape(.circle)
+            .clipShape(
+//                Circle()
+//                RoundedRectangle(cornerRadius: 25.0)
+                Ellipse()
+            )
+        
         
         
         Image("linkedinIcon")
-        //.renderingMode(.template)
-            .resizable()
+//  renderingMode change color of icons, only transparent background images icons
+        .renderingMode(.template)
+//            .resizable()
         //.aspectRatio(contentMode: .fit)
         //.scaledToFit()
-            .scaledToFit()
+//            .scaledToFit()
             .frame(width: 300, height: 200)
             .foregroundColor(.green)
         //.clipped()
@@ -39,6 +49,11 @@ struct _5ImageView : View {
         //Ellipse()
         //    Circle()
         //)
+        
+        Image("linkedinIcon")
+//        instead of changing color here, go to asset, select image, open the inspector in right side change Render as to Template Image
+            .foregroundStyle(.pink)
+        
     }
 }
 
