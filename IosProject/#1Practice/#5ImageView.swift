@@ -16,6 +16,12 @@ struct _5ImageView : View {
         
         Image("arunPic")
             .resizable()
+//            .aspectRatio(contentMode: .fit)  both do same thing scaledToFit
+            .scaledToFit()
+//            .scaledToFill()
+//            .frame(width: 300, height: 200)
+        
+        
         
         Image("linkedinIcon")
         //.renderingMode(.template)
